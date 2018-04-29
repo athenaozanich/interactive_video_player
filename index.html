@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Interactive Video Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/mediaelement-and-player.min.js"></script>
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/mediaelementplayer.css" />
+  <link rel="stylesheet" href="css/styles.css"/>
+
+</head>
+
+<body class="container">
+
+      <div class="videoWrapper">
+        <video >
+          <source src="video/video.mp4" type="video/mp4">
+          <source src="video/video.ogg" type="video/ogg">
+          <track label="English" kind="subtitles" srclang="en" src="video/captions.vtt" default>
+        </video>
+        <button id="reset">Reset</button>
+      </div> 
+      <div class="transcript">
+        <p>Now that we've looked at the architecture of the internet, let's see how you might 
+        connect your personal devices to the internet inside your house. Well there are many ways to
+        connect to the internet, and most often people connect wirelessly. Let's look at an example of how If you live in a city or a town, you probably have a coaxial cable for cable Internet, or a phone line if you have DSL, running to the outside of your house, that connects you to the Internet Service Provider, or ISP. If you live far out in the country, you'll more likely have a dish outside your house, connecting you wirelessly to your closest ISP, or you might also use the telephone system. Whether a wire comes straight from the ISP hookup outside your house, or it travels over radio waves from your roof, the first stop a wire will make once inside your house, is at your modem. A modem is what connects the internet to your network at home. A few common residential modems are DSL or...
+        </p>
+      </div>
+      <script type="text/javascript">
+        const reset = document.getElementById('reset');
+        var mediaElement = new MediaElementPlayer('mediaElement', {
+            features: ['playpause', 'tracks', 'current', 'progress', 'duration', 'volume', 'fullscreen'],
+            toggleCaptionsButtonWhenOnlyOne: true,
+            stretching: 'responsive',
+        // When using `MediaElementPlayer`, an `instance` argument
+        // is available in the `success` callback
+            success: function(mediaElement, originalNode, instance) {
+            // do things
+          }
+        });
+        
+        reset.addEventListener('click', () => { mediaElement.pause(); } );
+      </script>
+</body>
+
+</html>
