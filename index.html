@@ -82,11 +82,14 @@
             var vid = document.querySelector("video");
             function setCurTime(start) {
                 var transcript = document.querySelectorAll("span");
-                
+                var dataStart = [];
               for (var i = 0; i < transcript.length; i += 1){
-                var dataStart = Array(transcript[i].getAttribute("data-start"));
+                dataStart.push(Array(transcript[i].getAttribute("data-start")));
+                return dataStart;
+              }for (var i = 0; i < dataStart.length; i += 1){
+                console.log("Start time is "+dataStart[i]+"!");
               }
-                console.log("Start time is "+dataStart+"!");
+                
             }
             
 
