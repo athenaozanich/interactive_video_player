@@ -25,13 +25,13 @@
         </video>
       </div> 
       <div class="transcript">
-        <span onclick="setCurTime(0.00)" data-start="0.000" data-end="4.130">
+        <span onclick="setCurTime()" data-start="0.000" data-end="4.130">
           Now that we've looked at the architecture of the internet, let's see how you might
         </span>
-        <span onclick="setCurTime(4.130)" data-start="4.130" data-end="7.535">
+        <span onclick="setCurTime()" data-start="4.130" data-end="7.535">
           connect your personal devices to the internet inside your house.
         </span>
-        <span onclick="setCurTime(7.535)" data-start="7.535" data-end="11.270">
+        <span onclick="setCurTime()" data-start="7.535" data-end="11.270">
           Well there are many ways to connect to the internet, and
         </span>
         <span data-start="11.270" data-end="13.960">
@@ -80,16 +80,19 @@
         
             
             var vid = document.querySelector("video");
-            function setCurTime(start) {
+
+            function setCurTime() {
+              //get all span els
                 var transcript = document.querySelectorAll("span");
+              //initialize dataStart Array
                 var dataStart = [];
               for (var i = 0; i < transcript.length; i += 1){
+              //loop through span and assign data-start attr to array
                 dataStart.push(Array(transcript[i].getAttribute("data-start")));
-                return dataStart;
-              }for (var i = 0; i < dataStart.length; i += 1){
-                console.log("Start time is "+dataStart[i]+"!");
-              }
                 
+              }
+              //at a loss lol
+              console.log("Start time is "+ +"!");
             }
             
 
