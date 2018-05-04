@@ -1,5 +1,4 @@
 //select player
-
 var video = document.querySelector("video");
         //add controls
 $('video').mediaelementplayer({
@@ -8,16 +7,16 @@ $('video').mediaelementplayer({
    
    
  });
-//style player and controls
 
 
+//select Span elements for 
 var transcript = document.querySelectorAll("span");
-
+//style player and controls
 video.addEventListener("timeupdate", function () {
     for (var _i = 0; _i < transcript.length; _i += 1) {
       transcript[_i].style.cursor = "text";
       if (video.currentTime > transcript[_i].getAttribute("data-start") && video.currentTime < transcript[_i].getAttribute("data-end")) {
-        transcript[_i].style.color = "yellowgreen";
+        transcript[_i].style.color = "lightgreen";
       } else {
         transcript[_i].style.color = "";
       }

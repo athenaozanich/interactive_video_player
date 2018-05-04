@@ -1,0 +1,15 @@
+@import url($font-url--google);
+
+html{
+	font-family:$font-family--primary;
+	font-size: 1.5rem;
+	
+}
+
+p {
+	text-shadow:  $text-shadow;
+	& span:hover{
+		text-shadow: $text-shadow-highlight;
+		cursor: pointer !important;
+	}
+}

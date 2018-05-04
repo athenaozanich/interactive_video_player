@@ -1,39 +1,5 @@
-.container{
-	background-color:#5a5a5a;
-	display:block;
-	margin:0 auto;
-	width:100%;
-	font-size:1.5rem;
-	color:whitesmoke;
-}
-.videoWrapper{
-	display:block;
-	margin:0 auto;
-	width:100%;
-}
-.transcript{
-	width:80%;
-	display:block;
-	margin:0 auto;
-}
-.mejs__controls{
-	background-color: yellowgreen !important;
-}
-.mejs__container{
-	border: 5px solid yellowgreen;
-}
-.mejs__container *{
-	max-height: 100%;
-	max-width: 100%;
-}
-@media(min-width: 769px){
+@import   				'utils/index';
 
-.videoWrapper{
-	
-	width:80%;
-}
+@import					'base/index';
 
-	.transcript{
-	width:80%;
-	}
-}
+@import    				'components/index';

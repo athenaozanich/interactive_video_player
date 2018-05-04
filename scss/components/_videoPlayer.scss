@@ -1,0 +1,32 @@
+
+/***************************************************/
+/*        wrapper for positioning the player       */
+/***************************************************/
+.videoWrapper{
+	@include brk-pt{
+		width  					:$centered-width;
+	}
+	@include center {
+		width  					:$full-width;
+	}
+
+}
+/***************************************************/
+/*      styles the MEJS controls and container     */
+/***************************************************/
+.mejs{
+	@include element(controls){
+		background-color  		: $video-primary !important;
+	}
+	@include element(container){
+		border					: 2px solid $video-primary;
+		
+		/**************************************************/
+		/*         Containment fix for IE and Edge        */
+		/**************************************************/
+		& *{
+			max-height	      	: $full-width;
+			max-width  			: $full-width;
+		}
+	}
+}

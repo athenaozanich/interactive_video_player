@@ -1,36 +1,54 @@
+/***************************************************/
+/*        Base styles for main content layout      */
+/***************************************************/
+@import url("https://fonts.googleapis.com/css?family=Titan+One:");
 .container {
+  max-width: 100%;
   background-color: #5a5a5a;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
   font-size: 1.5rem;
   color: whitesmoke; }
 
+html {
+  font-family: "Titan One", sans-serif;
+  font-size: 1.5rem; }
+
+p {
+  text-shadow: 2px 2px 4px #000; }
+  p span:hover {
+    text-shadow: 2px 2px 4px forestgreen;
+    cursor: pointer !important; }
+
+/***************************************************/
+/*        wrapper for positioning the player       */
+/***************************************************/
 .videoWrapper {
   display: block;
   margin: 0 auto;
   width: 100%; }
+  @media (min-width: 769px) {
+    .videoWrapper {
+      width: 80%; } }
 
-.transcript {
-  width: 80%;
-  display: block;
-  margin: 0 auto; }
-
+/***************************************************/
+/*      styles the MEJS controls and container     */
+/***************************************************/
 .mejs__controls {
-  background-color: yellowgreen !important; }
-
+  background-color: #004d00 !important; }
 .mejs__container {
-  border: 5px solid yellowgreen; }
+  border: 2px solid #004d00;
+  /**************************************************/
+  /*         Containment fix for IE and Edge        */
+  /**************************************************/ }
+  .mejs__container * {
+    max-height: 100%;
+    max-width: 100%; }
 
-.mejs__container * {
-  max-height: 100%;
-  max-width: 100%; }
-
-@media (min-width: 769px) {
-  .videoWrapper {
-    width: 80%; }
-
-  .transcript {
-    width: 80%; } }
+/**************************************************/
+/*         Styles for video transcript text       */
+/**************************************************/
+.transcript {
+  display: block;
+  margin: 0 auto;
+  width: 80%; }
 
 /*# sourceMappingURL=styles.css.map */

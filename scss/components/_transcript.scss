@@ -1,0 +1,8 @@
+/**************************************************/
+/*         Styles for video transcript text       */
+/**************************************************/
+.transcript{
+	@include center {
+		width					:$centered-width;
+	}
+}

@@ -1,0 +1,25 @@
+//Font stack
+
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Titan+One:';
+$font-family--primary    : 'Titan One', sans-serif;
+$font-family--secondary  :  Arial, sans-serif;
+
+// Breakpoints
+$brkpoint-md    		 : "(min-width: 769px)";
+
+//widths
+$max-width 				 : 100%;
+$centered-width			 : 80%;
+$full-width				 : 100%;
+
+//Typography styles
+$text-shadow			 : 2px 2px 4px #000;
+$text-shadow-highlight	 : 2px 2px 4px forestgreen;
+
+//Typography colors
+$text-primary			 : whitesmoke;
+$text-second			 : yellowgreen;
+
+//Video styles
+$video-primary			 : rgba(0, 77, 0, 1);
+$video-secondary		 : rgba(0, 77, 0, 1);
